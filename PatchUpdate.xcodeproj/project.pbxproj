@@ -18,6 +18,7 @@
 		37799460178D551100C68990 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3779945E178D551100C68990 /* InfoPlist.strings */; };
 		37799463178D551100C68990 /* PatchUpdateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37799462178D551100C68990 /* PatchUpdateTests.m */; };
 		3779990D178D5AF700C68990 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 3779990C178D5AF700C68990 /* Resources */; };
+		37ED509D1793E11F00FE7D62 /* CocoStudio_Logo01.icns in Resources */ = {isa = PBXBuildFile; fileRef = 37ED509C1793E11F00FE7D62 /* CocoStudio_Logo01.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		37799461178D551100C68990 /* PatchUpdateTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PatchUpdateTests.h; sourceTree = "<group>"; };
 		37799462178D551100C68990 /* PatchUpdateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PatchUpdateTests.m; sourceTree = "<group>"; };
 		3779990C178D5AF700C68990 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		37ED509C1793E11F00FE7D62 /* CocoStudio_Logo01.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CocoStudio_Logo01.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		37799429178D551000C68990 = {
 			isa = PBXGroup;
 			children = (
+				37ED509C1793E11F00FE7D62 /* CocoStudio_Logo01.icns */,
 				3779943E178D551000C68990 /* PatchUpdate */,
 				3779945B178D551100C68990 /* PatchUpdateTests */,
 				37799437178D551000C68990 /* Frameworks */,
@@ -231,6 +234,7 @@
 				37799449178D551000C68990 /* Credits.rtf in Resources */,
 				3779944F178D551000C68990 /* MainMenu.xib in Resources */,
 				3779990D178D5AF700C68990 /* Resources in Resources */,
+				37ED509D1793E11F00FE7D62 /* CocoStudio_Logo01.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +452,7 @@
 				37799468178D551100C68990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37799469178D551100C68990 /* Build configuration list for PBXNativeTarget "PatchUpdateTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +461,7 @@
 				3779946B178D551100C68990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
