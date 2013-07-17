@@ -37,7 +37,7 @@ typedef enum
     UL_C_GRADIENT
 }UILayerColorType;
     
-class UIClippingLayer : public cocos2d::CCLayer
+class UIClippingLayer : public cocos2d::CCLayerRGBA
 {
 public:
     UIClippingLayer();
@@ -50,13 +50,12 @@ public:
     bool getColorType();
     void setClipRect(const cocos2d::CCRect &rect);
     const CCRect& getClippingRect();
-    void setClipSize(float width,float height);
     virtual void setPosition(const CCPoint &pos);
-    void setColor(const ccColor3B &color);
-    void setStartColor(const ccColor3B &color);
-    void setEndColor(const ccColor3B &color);
-    void setVector(const CCPoint &vector);
-    void setColorOpacity(int opacity);
+    void setBGColor(const ccColor3B &color);
+    void setBGStartColor(const ccColor3B &color);
+    void setBGEndColor(const ccColor3B &color);
+    void setBGVector(const CCPoint &vector);
+    void setBGColorOpacity(int opacity);
     virtual void onEnter();
     virtual void onExit();
     void checkClippingOption();
@@ -69,8 +68,6 @@ protected:
     bool m_bClippingEnable;
     float m_fScissorX;
     float m_fScissorY;
-    float m_fScissorWidth;
-    float m_fScissorHeight;
     bool m_bEnableCustomArea;
     bool m_bHandleScissor;
     CCPoint m_loacationInWorld;

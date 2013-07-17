@@ -126,6 +126,12 @@ UIWidget* CCSReader::widgetFromJsonDictionary(cs::CSJsonDictionary* data)
         widget = UIPageView::create();
         setPropsForPageViewFromJsonDictionary(widget, uiOptions);
     }
+    else if (classname && strcmp(classname, "LabelBMFont") == 0)
+    {
+        widget = UILabelBMFont::create();
+        setPropsForLabelBMFontFromJsonDictionary(widget, uiOptions);
+    }
+    
     int childrenCount = DICTOOL->getArrayCount_json(data, "children");
     for (int i=0;i<childrenCount;i++)
     {
@@ -177,9 +183,6 @@ UIWidget* CCSReader::widgetFromJsonFile(const char *fileName)
 		return NULL;
 	}
 	std::string strDes(des);
-	#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
-	strDes.assign(UTF8ToGBK(des));
-	#endif
     jsonDict = new cs::CSJsonDictionary();
     jsonDict->initWithDescription(strDes.c_str());
 
@@ -481,8 +484,6 @@ void CCSReader::setPropsForLabelFromJsonDictionary(UIWidget*widget,cs::CSJsonDic
     label->setFlipX(DICTOOL->getBooleanValue_json(options, "flipX"));
     label->setFlipY(DICTOOL->getBooleanValue_json(options, "flipY"));
     setColorPropsForWidgetFromJsonDictionary(widget,options);
-    int gravity = DICTOOL->getIntValue_json(options, "gravity");
-    label->setGravity((LabelGravity)gravity);
 }
 
 void CCSReader::setPropsForLabelAtlasFromJsonDictionary(UIWidget*widget,cs::CSJsonDictionary* options)
@@ -520,21 +521,26 @@ void CCSReader::setPropsForPanelFromJsonDictionary(UIWidget*widget,cs::CSJsonDic
     UIPanel* panel = (UIPanel*)widget;
     bool backGroundScale9Enable = DICTOOL->getBooleanValue_json(options, "backGroundScale9Enable");
     panel->setBackGroundImageScale9Enable(backGroundScale9Enable);
-    int cr = DICTOOL->getIntValue_json(options, "colorR");
-    int cg = DICTOOL->getIntValue_json(options, "colorG");
-    int cb = DICTOOL->getIntValue_json(options, "colorB");
+    int cr = DICTOOL->getIntValue_json(options, "bgColorR");
+    int cg = DICTOOL->getIntValue_json(options, "bgColorG");
+    int cb = DICTOOL->getIntValue_json(options, "bgColorB");
     
-    int scr = DICTOOL->getIntValue_json(options, "startColorR");
-    int scg = DICTOOL->getIntValue_json(options, "startColorG");
-    int scb = DICTOOL->getIntValue_json(options, "startColorB");
+    int scr = DICTOOL->getIntValue_json(options, "bgStartColorR");
+    int scg = DICTOOL->getIntValue_json(options, "bgStartColorG");
+    int scb = DICTOOL->getIntValue_json(options, "bgStartColorB");
     
-    int ecr = DICTOOL->getIntValue_json(options, "endColorR");
-    int ecg = DICTOOL->getIntValue_json(options, "endColorG");
-    int ecb = DICTOOL->getIntValue_json(options, "endColorB");
+    int ecr = DICTOOL->getIntValue_json(options, "bgEndColorR");
+    int ecg = DICTOOL->getIntValue_json(options, "bgEndColorG");
+    int ecb = DICTOOL->getIntValue_json(options, "bgEndColorB");
     
-    int co = DICTOOL->getIntValue_json(options, "colorOpacity");
+    float bgcv1 = DICTOOL->getFloatValue_json(options, "bgColorVectorX");
+    float bgcv2 = DICTOOL->getFloatValue_json(options, "bgColorVectorY");
+    panel->setBackGroundColorVector(ccp(bgcv1, bgcv2));
     
+    int co = DICTOOL->getIntValue_json(options, "bgColorOpacity");
     
+    int colorType = DICTOOL->getIntValue_json(options, "colorType");
+    panel->setBackGroundColorType(PanelColorType(colorType));
     float w = DICTOOL->getFloatValue_json(options, "width");
     float h = DICTOOL->getFloatValue_json(options, "height");
     panel->setBackGroundColor(ccc3(scr, scg, scb),ccc3(ecr, ecg, ecb));
@@ -792,6 +798,26 @@ void CCSReader::setPropsForListViewFromJsonDictionary(UIWidget *widget, cs::CSJs
 void CCSReader::setPropsForPageViewFromJsonDictionary(UIWidget*widget,cs::CSJsonDictionary* options)
 {
     setPropsForPanelFromJsonDictionary(widget, options);
+    setColorPropsForWidgetFromJsonDictionary(widget,options);
+}
+
+void CCSReader::setPropsForLabelBMFontFromJsonDictionary(extension::UIWidget *widget, cs::CSJsonDictionary *options)
+{
+    setPropsForWidgetFromJsonDictionary(widget, options);
+    
+    UILabelBMFont* labelBMFont = (UILabelBMFont*)widget;
+    
+    std::string tp_c = m_strFilePath;
+    const char* cmf_tp = NULL;
+//    const char* cmft = DICTOOL->getStringValue_json(options, "fileName");
+    const char* cmft = "UIResForEditor/FNT/markerfelt24shadow.fnt";
+    cmf_tp = tp_c.append(cmft).c_str();
+    
+    labelBMFont->setFntFile(cmf_tp);
+    
+    const char* text = DICTOOL->getStringValue_json(options, "text");
+    labelBMFont->setText(text);
+    
     setColorPropsForWidgetFromJsonDictionary(widget,options);
 }
 
