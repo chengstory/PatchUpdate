@@ -1431,7 +1431,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="25593720">
 								<int key="NSCellFlags">68157504</int>
 								<int key="NSCellFlags2">71304192</int>
-								<string key="NSContents">cocos2dx v2.1.4c 升级到 cocos2dx v2.1.4d</string>
+								<string key="NSContents">cocos2dx v2.1.4d 升级到 cocos2dx v2.1.4e</string>
 								<reference key="NSSupport" ref="725590612"/>
 								<string key="NSCellIdentifier">_NS:1535</string>
 								<reference key="NSControlView" ref="761597410"/>
@@ -1494,7 +1494,7 @@
 												<string>WebURLsWithTitlesPboardType</string>
 												<string>public.url</string>
 											</set>
-											<string key="NSFrameSize">{385, 281}</string>
+											<string key="NSFrameSize">{385, 420}</string>
 											<reference key="NSSuperview" ref="994144490"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="1008410348"/>
@@ -1505,24 +1505,18 @@
 														<object class="NSMutableString" key="NSString">
 															<bytes key="NS.bytes">5rOo5oSP77yB77yB77yB77yB77yB77yMDSAgIDHjgIHlnKjkvb/nlKjkuYvliY3or7for6bnu4bpmIXo
 r7vkuIDkuIvms6jmhI/kuovpobnvvIzku6XlhY3mk43kvZzlpLHor6/jgIINICAgMuOAgeacrOWNh+e6
-p+WMheS7heeUqOS6jmNvY29zMmR4Mi4xLjRj5a6M5pW05YyF5Y2H57qn5Li6Mi4xLjRk5a6M5pW05YyF
+p+WMheS7heeUqOS6jmNvY29zMmR4Mi4xLjRk5a6M5pW05YyF5Y2H57qn5Li6Mi4xLjRl5a6M5pW05YyF
 77yMDeS4jeeUqOS6juWFtuS7lmNvY29zMmR454mI5pys44CCDSAgIDPjgIHmnKzljYfnuqfljIXov5vo
 oYznmoTmmK/mlofku7bopobnm5bmk43kvZzvvIzor7flnKjljYfnuqfliY3lpIfku73lpb3ku6XliY3n
 moTniYgN5pys77yM6Ziy5q2i5Luj56CB5Lii5aSx44CCDSAgIDTjgIHor7flnKjpgInmi6ljb2NvczJk
 eOeahOagueebruW9leOAgiAN5q+U5aaC77yaQzpcVXNlcnNcZGNcRGVza3RvcFxjb2NvczJkeF92Mi4x
-LjRj5LiL6Z2i5YyF5ZCr5LqGY29jb3MyZHgsDUNvY29zRGVuc2hpb24sIGRvY3VtZW50LGV4dGVuc2lv
+LjRk5LiL6Z2i5YyF5ZCr5LqGY29jb3MyZHgsDUNvY29zRGVuc2hpb24sIGRvY3VtZW50LGV4dGVuc2lv
 bnMsIGV4dGVuYWznrYnnrYnvvIzor7fpgInmi6kNQzpcVXNlcnNcZGNcRGVza3RvcFxjb2NvczJkeF92
-Mi4xLjRj6L+Z5Liq55uu5b2V44CCDQ1jb2NvczJkeCAyLjEuNGTmm7TmlrDlhoXlrrnvvJoNICAgMe+8
-jOS/ruaUue+8mlRlc3RDcHAvRXh0ZW5zaW9uVGVzdC9TY2VuZUpzb250ZXN05Li65o2V6bG8MueahOeZ
-u+mZhueVjOmdouOAgg0gICAy77yM5L+u5aSN77yaQ0NDb21BdWRpb+e7hOS7tuS/neWtmOmihOWKoOi9
-vemfs+S5kOaWh+S7tueahOWQjeensOOAgg0gICAz77yM5L+u5aSN77yaR1VJQ29tcG9uZW50IOaXoOaz
-lemAmui/h+WcuuaZr+e8lui+keWZqOWumuS5ieWQjeensOiOt+WPlueahOmXrumimOOAgg0gICA077yM
-5L+u5aSN77ya6Kej5Yaz6L6T5YWl5qGGd2luZG93c+S4i+WIoOmZpOS4reaWh+Wtl+WPmOS5seeggeea
-hOmXrumimOOAgg0gICA177yM5Yig6Zmk77yaVUlHcmFkaWVudFBhbmVs77yM5riQ5Y+Y6Imy5Yqf6IO9
-5ZCI5bm25YWlVUlQYW5lbDsNICAgNu+8jOS/ruWkje+8muivu+WPlmpzb27mlofku7bvvIzovpPlhaXm
-oYbkuI3mmL7npLrpl67popjvvJsNICAgN++8jOa3u+WKoO+8mlVJTGF5ZXLovpPlhaXlpITnkIbvvIzl
-j6/lvIDlkK/miJblhbPpl61VSUxheWVy55qE6L6T5YWl5LqL5Lu277ybDSAgIDjvvIzkv67mlLnvvJrl
-iIfmjaLlnLrmma/lho3mrKHosIPnlKhVSeWKqOeUu+ayoeacieaViOaenOeahOmXrumimOOAggo</bytes>
+Mi4xLjRk6L+Z5Liq55uu5b2V44CCDQ1jb2NvczJkeCAyLjEuNGXmm7TmlrDlhoXlrrnvvJoNICAgMeOA
+geS/ruWkje+8mmNvY29zMmR4IDIuMS40ZCDpopHnuYHliIfmjaJBcm1hdHVyZeS+i+WtkOWvvOiHtOW0
+qea6g+eahOmXrumimOOAgg0KICAgMuOAgeS/ruWkje+8mmNvY29zMmR4IDIuMS40ZOS4reaWh+S5seeg
+geeahOmXrumimOOAgg0KICAgM+OAgeWujOWWhOaOp+S7tuminOiJsuWSjOmAj+aYjuW6puiuvue9ruOA
+gg</bytes>
 														</object>
 														<dictionary key="NSAttributes">
 															<object class="NSColor" key="NSBackgroundColor">
@@ -1595,6 +1589,7 @@ iIfmjaLlnLrmma/lho3mrKHosIPnlKhVSeWKqOeUu+ayoeacieaViOaenOeahOmXrumimOOAggo</byt
 											</object>
 											<int key="NSTVFlags">6</int>
 											<string key="NSMaxSize">{463, 10000000}</string>
+											<string key="NSMinize">{385, 281}</string>
 											<nil key="NSDelegate"/>
 										</object>
 									</array>
@@ -1766,11 +1761,13 @@ wGw</bytes>
 									<string key="NSFrame">{{401, 1}, {15, 281}}</string>
 									<reference key="NSSuperview" ref="609913676"/>
 									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:83</string>
+									<bool key="NSEnabled">YES</bool>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<reference key="NSTarget" ref="609913676"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSPercent">0.44603174603174606</double>
+									<double key="NSPercent">0.669047619047619</double>
 								</object>
 								<object class="NSScroller" id="217435475">
 									<reference key="NSNextResponder" ref="609913676"/>
@@ -1793,7 +1790,7 @@ wGw</bytes>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="217435475"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
-							<int key="NSsFlags">133138</int>
+							<int key="NSsFlags">133202</int>
 							<reference key="NSVScroller" ref="1008410348"/>
 							<reference key="NSHScroller" ref="217435475"/>
 							<reference key="NSContentView" ref="994144490"/>
