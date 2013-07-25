@@ -1494,7 +1494,7 @@
 												<string>WebURLsWithTitlesPboardType</string>
 												<string>public.url</string>
 											</set>
-											<string key="NSFrameSize">{385, 420}</string>
+											<string key="NSFrameSize">{415, 399}</string>
 											<reference key="NSSuperview" ref="994144490"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="1008410348"/>
@@ -1549,7 +1549,7 @@ gg</bytes>
 													<nil key="NSDelegate"/>
 												</object>
 												<reference key="NSTextView" ref="497362524"/>
-												<double key="NSWidth">385</double>
+												<double key="NSWidth">415</double>
 												<int key="NSTCFlags">1</int>
 											</object>
 											<object class="NSTextViewSharedData" key="NSSharedData">
@@ -1589,11 +1589,11 @@ gg</bytes>
 											</object>
 											<int key="NSTVFlags">6</int>
 											<string key="NSMaxSize">{463, 10000000}</string>
-											<string key="NSMinize">{385, 281}</string>
+											<string key="NSMinize">{415, 281}</string>
 											<nil key="NSDelegate"/>
 										</object>
 									</array>
-									<string key="NSFrame">{{1, 1}, {400, 281}}</string>
+									<string key="NSFrame">{{1, 1}, {415, 281}}</string>
 									<reference key="NSSuperview" ref="609913676"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="497362524"/>
@@ -1758,7 +1758,7 @@ wGw</bytes>
 								<object class="NSScroller" id="1008410348">
 									<reference key="NSNextResponder" ref="609913676"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{401, 1}, {15, 281}}</string>
+									<string key="NSFrame">{{400, 1}, {16, 281}}</string>
 									<reference key="NSSuperview" ref="609913676"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView"/>
@@ -1767,7 +1767,7 @@ wGw</bytes>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<reference key="NSTarget" ref="609913676"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSPercent">0.669047619047619</double>
+									<double key="NSPercent">0.7042606516290727</double>
 								</object>
 								<object class="NSScroller" id="217435475">
 									<reference key="NSNextResponder" ref="609913676"/>
