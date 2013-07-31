@@ -24,10 +24,6 @@
 
 #include "UILabelBMFont.h"
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
-#include "../../CocostudioReader/EncodedHelper.h"
-#endif
-
 NS_CC_EXT_BEGIN
     
 UILabelBMFont::UILabelBMFont():
@@ -55,7 +51,7 @@ UILabelBMFont* UILabelBMFont::create()
 void UILabelBMFont::initNodes()
 {
     UIWidget::initNodes();
-    m_pLabelBMFont = cocos2d::CCLabelBMFont::create();
+    m_pLabelBMFont = CCLabelBMFont::create();
     m_pRender->addChild(m_pLabelBMFont);
 }
 
@@ -73,21 +69,6 @@ void UILabelBMFont::setText(const char* value)
 	m_pLabelBMFont->setString(value);
 }
 
-void UILabelBMFont::setTextASCII(const char* value)
-{
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
-    
-	if (!value)
-	{
-		return;
-	}
-	std::string strText(value);
-	std::string result = ASCII2UTF_8(strText);
-	m_pLabelBMFont->setString(result.c_str());
-    
-#endif
-}
-
 const char* UILabelBMFont::getStringValue()
 {
     return m_pLabelBMFont->getString();
@@ -98,7 +79,7 @@ CCNode* UILabelBMFont::getValidNode()
     return m_pLabelBMFont;
 }
 
-void UILabelBMFont::setAnchorPoint(const cocos2d::CCPoint &pt)
+void UILabelBMFont::setAnchorPoint(const CCPoint &pt)
 {
     UIWidget::setAnchorPoint(pt);
     m_pLabelBMFont->setAnchorPoint(pt);

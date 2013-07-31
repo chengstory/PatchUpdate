@@ -6,6 +6,14 @@ CocosGUITestScene::CocosGUITestScene(bool bPortrait)
 {
 	TestScene::init();
 }
+
+CocosGUITestScene::~CocosGUITestScene()
+{
+	cocos2d::extension::CCJsonReader::purgeJsonReader();
+	cocos2d::extension::UIActionManager::purgeUIActionManager();
+	cocos2d::extension::UIHelper::purgeUIHelper();
+}
+
 void CocosGUITestScene::runThisTest()
 {
     
@@ -20,8 +28,6 @@ void CocosGUITestScene::runThisTest()
 }
 void CocosGUITestScene::MainMenuCallback(CCObject* pSender)
 {
-    CCLOG("p1 click");
-    CCLOG("p1 retain count == %d",ul->retainCount());
     ul->removeFromParent();
     TestScene::MainMenuCallback(pSender);
 }

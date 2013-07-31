@@ -26,7 +26,7 @@
 
 NS_CC_EXT_BEGIN
 
-static void checkNodeClippingOption(cocos2d::CCNode *node)
+static void checkNodeClippingOption(CCNode *node)
 {
     CCArray* nodeChildren = node->getChildren();
     if (!nodeChildren)
@@ -69,14 +69,13 @@ m_gEndColor(ccWHITE),
 m_nCOpacity(255),
 m_parentClippingRect(CCRectZero),
 m_clippingRect(CCRectZero),
-m_AlongVector(CCPointZero)
+m_AlongVector(ccp(0.0f, -1.0f))
 {
     
 }
 
 UIClippingLayer::~UIClippingLayer()
 {
-
 }
 
 UIClippingLayer* UIClippingLayer::create()
@@ -244,7 +243,7 @@ void UIClippingLayer::setColorType(UILayerColorType type)
             m_pColorRender->setContentSize(getContentSize());
             m_pColorRender->setOpacity(m_nCOpacity);
             m_pColorRender->setColor(m_cColor);
-            this->addChild(m_pColorRender,-1);
+            this->addChild(m_pColorRender,-2);
             break;
         case UL_C_GRADIENT:
             m_pGradientRender = CCLayerGradient::create();
@@ -253,7 +252,7 @@ void UIClippingLayer::setColorType(UILayerColorType type)
             m_pGradientRender->setStartColor(m_gStartColor);
             m_pGradientRender->setEndColor(m_gEndColor);
             m_pGradientRender->setVector(m_AlongVector);
-            this->addChild(m_pGradientRender,-1);
+            this->addChild(m_pGradientRender,-2);
             break;
         default:
             break;
@@ -265,7 +264,7 @@ bool UIClippingLayer::getColorType()
     return m_colorType;
 }
 
-void UIClippingLayer::setClipRect(const cocos2d::CCRect &rect)
+void UIClippingLayer::setClipRect(const CCRect &rect)
 {
     
 }
@@ -273,10 +272,10 @@ void UIClippingLayer::setClipRect(const cocos2d::CCRect &rect)
 const CCRect& UIClippingLayer::getClippingRect()
 {
 //    CCSize s;
+    m_loacationInWorld = convertToWorldSpace(CCPointZero);
     CCAffineTransform t = nodeToWorldTransform();
     float scissorWidth = m_obContentSize.width*t.a;
     float scissorHeight = m_obContentSize.height*t.d;
-    
     if (m_pClippingParent)
     {
         m_parentClippingRect = m_pClippingParent->getClippingRect();
@@ -329,10 +328,10 @@ const CCRect& UIClippingLayer::getClippingRect()
     return m_clippingRect;
 }
 
-void UIClippingLayer::setPosition(const cocos2d::CCPoint &pos)
+void UIClippingLayer::setPosition(const CCPoint &pos)
 {
     CCLayerRGBA::setPosition(pos);
-    m_loacationInWorld = convertToWorldSpace(CCPointZero);
+//    m_loacationInWorld = convertToWorldSpace(CCPointZero);
 }
 
 void UIClippingLayer::setBGColor(const ccColor3B &color)
@@ -362,7 +361,7 @@ void UIClippingLayer::setBGEndColor(const ccColor3B &color)
     }
 }
 
-void UIClippingLayer::setBGVector(const cocos2d::CCPoint &vector)
+void UIClippingLayer::setBGVector(const CCPoint &vector)
 {
     m_AlongVector = vector;
     if (m_pGradientRender)
@@ -389,7 +388,7 @@ void UIClippingLayer::setBGColorOpacity(int opacity)
     }
 }
 
-void UIClippingLayer::setContentSize(const cocos2d::CCSize &size)
+void UIClippingLayer::setContentSize(const CCSize &size)
 {
     CCLayerRGBA::setContentSize(size);
     if (m_pColorRender)
