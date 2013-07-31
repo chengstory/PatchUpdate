@@ -1422,7 +1422,7 @@
 						<object class="NSTextField" id="761597410">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{86, 408}, {275, 17}}</string>
+							<string key="NSFrame">{{86, 408}, {272, 17}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1032766650"/>
@@ -1431,7 +1431,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="25593720">
 								<int key="NSCellFlags">68157504</int>
 								<int key="NSCellFlags2">71304192</int>
-								<string key="NSContents">cocos2dx v2.1.4d 升级到 cocos2dx v2.1.4e</string>
+								<string key="NSContents">cocos2dx v2.1.4e 升级到 cocos2dx v2.1.4f</string>
 								<reference key="NSSupport" ref="725590612"/>
 								<string key="NSCellIdentifier">_NS:1535</string>
 								<reference key="NSControlView" ref="761597410"/>
@@ -1443,7 +1443,7 @@
 						<object class="NSTextField" id="1032766650">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{117, 383}, {212, 17}}</string>
+							<string key="NSFrame">{{116, 383}, {212, 17}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="394804863"/>
@@ -1494,7 +1494,7 @@
 												<string>WebURLsWithTitlesPboardType</string>
 												<string>public.url</string>
 											</set>
-											<string key="NSFrameSize">{415, 399}</string>
+											<string key="NSFrameSize">{385, 420}</string>
 											<reference key="NSSuperview" ref="994144490"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="1008410348"/>
@@ -1505,41 +1505,54 @@
 														<object class="NSMutableString" key="NSString">
 															<bytes key="NS.bytes">5rOo5oSP77yB77yB77yB77yB77yB77yMDSAgIDHjgIHlnKjkvb/nlKjkuYvliY3or7for6bnu4bpmIXo
 r7vkuIDkuIvms6jmhI/kuovpobnvvIzku6XlhY3mk43kvZzlpLHor6/jgIINICAgMuOAgeacrOWNh+e6
-p+WMheS7heeUqOS6jmNvY29zMmR4Mi4xLjRk5a6M5pW05YyF5Y2H57qn5Li6Mi4xLjRl5a6M5pW05YyF
-77yMDeS4jeeUqOS6juWFtuS7lmNvY29zMmR454mI5pys44CCDSAgIDPjgIHmnKzljYfnuqfljIXov5vo
-oYznmoTmmK/mlofku7bopobnm5bmk43kvZzvvIzor7flnKjljYfnuqfliY3lpIfku73lpb3ku6XliY3n
-moTniYgN5pys77yM6Ziy5q2i5Luj56CB5Lii5aSx44CCDSAgIDTjgIHor7flnKjpgInmi6ljb2NvczJk
-eOeahOagueebruW9leOAgiAN5q+U5aaC77yaQzpcVXNlcnNcZGNcRGVza3RvcFxjb2NvczJkeF92Mi4x
-LjRk5LiL6Z2i5YyF5ZCr5LqGY29jb3MyZHgsDUNvY29zRGVuc2hpb24sIGRvY3VtZW50LGV4dGVuc2lv
-bnMsIGV4dGVuYWznrYnnrYnvvIzor7fpgInmi6kNQzpcVXNlcnNcZGNcRGVza3RvcFxjb2NvczJkeF92
-Mi4xLjRk6L+Z5Liq55uu5b2V44CCDQ1jb2NvczJkeCAyLjEuNGXmm7TmlrDlhoXlrrnvvJoNICAgMeOA
-geS/ruWkje+8mmNvY29zMmR4IDIuMS40ZCDpopHnuYHliIfmjaJBcm1hdHVyZeS+i+WtkOWvvOiHtOW0
-qea6g+eahOmXrumimOOAgg0KICAgMuOAgeS/ruWkje+8mmNvY29zMmR4IDIuMS40ZOS4reaWh+S5seeg
-geeahOmXrumimOOAgg0KICAgM+OAgeWujOWWhOaOp+S7tuminOiJsuWSjOmAj+aYjuW6puiuvue9ruOA
-gg</bytes>
+p+WMheS7heeUqOS6jmNvY29zMmR4Mi4xLjRl5a6M5pW05YyF5Y2H57qn5Li6Mi4xLjRm5a6M5pW05YyF
+77yMDeS4jeeUqOS6juWFtuS7lmNvY29zMmR454mI5pys44CCDSAgM+OAgeacrOWNh+e6p+WMhei/m+ih
+jOeahOaYr+aWh+S7tuimhuebluaTjeS9nO+8jOivt+WcqOWNh+e6p+WJjeWkh+S7veWlveS7peWJjeea
+hOeJiA3mnKzvvIzpmLLmraLku6PnoIHkuKLlpLHjgIINICA044CB6K+35Zyo6YCJ5oupY29jb3MyZHjn
+moTmoLnnm67lvZXjgIIgDeavlOWmgu+8mkM6XFVzZXJzXGRjXERlc2t0b3BcY29jb3MyZHhfdjIuMS40
+ZeS4i+mdouWMheWQq+S6hmNvY29zMmR4LA1Db2Nvc0RlbnNoaW9uLCBkb2N1bWVudCxleHRlbnNpb25z
+LCBleHRlbmFs562J562J77yM6K+36YCJ5oupDUM6XFVzZXJzXGRjXERlc2t0b3BcY29jb3MyZHhfdjIu
+MS40Zei/meS4quebruW9leOAgg0NY29jb3MyZHggMi4xLjRm5pu05paw5YaF5a6577yaDSAgMeOAgeWK
+oOWFpeW4g+WxgOezu+e7n+OAgg0KICAy44CB5L+u5aSN5bGC5a655Zmo6IOM5pmv6Imy5ZKM6IOM5pmv
+5Zu+55qE6YGu5oyh6Zeu6aKY44CCDQogICAz44CB5L+u5aSN5paH5pys5oyJ6ZKu55qE5paH5pys6YGu
+5oyh6Zeu6aKY44CCCiAgIDTjgIHkv67lpI1VSeahhuaetuWGheWtmOazhOa8j+mXrumimOOAgiAgICAg
+ICAgICAgICAgICAgICAgICA</bytes>
 														</object>
-														<dictionary key="NSAttributes">
-															<object class="NSColor" key="NSBackgroundColor">
-																<int key="NSColorSpace">2</int>
-																<bytes key="NSRGB">MSAxIDEAA</bytes>
-															</object>
-															<object class="NSColor" key="NSColor">
-																<int key="NSColorSpace">2</int>
-																<bytes key="NSRGB">MCAwLjM5MjE1Njg2MjcgMAA</bytes>
-															</object>
-															<object class="NSFont" key="NSFont">
-																<string key="NSName">STHeitiSC-Medium</string>
-																<double key="NSSize">14</double>
-																<int key="NSfFlags">16</int>
-															</object>
-															<object class="NSMutableParagraphStyle" key="NSParagraphStyle">
-																<int key="NSAlignment">4</int>
-																<double key="NSMinLineHeight">21</double>
-																<double key="NSDefaultTabInterval">36</double>
-																<array key="NSTabStops" id="0"/>
-																<int key="NSWritingDirection">1</int>
-															</object>
-														</dictionary>
+														<array class="NSMutableArray" key="NSAttributes">
+															<dictionary>
+																<object class="NSColor" key="NSBackgroundColor">
+																	<int key="NSColorSpace">2</int>
+																	<bytes key="NSRGB">MSAxIDEAA</bytes>
+																</object>
+																<object class="NSColor" key="NSColor">
+																	<int key="NSColorSpace">2</int>
+																	<bytes key="NSRGB">MCAwLjM5MjE1Njg2MjcgMAA</bytes>
+																</object>
+																<object class="NSFont" key="NSFont" id="357035186">
+																	<string key="NSName">STHeitiSC-Medium</string>
+																	<double key="NSSize">14</double>
+																	<int key="NSfFlags">16</int>
+																</object>
+																<object class="NSMutableParagraphStyle" key="NSParagraphStyle" id="1073709269">
+																	<int key="NSAlignment">4</int>
+																	<double key="NSMinLineHeight">21</double>
+																	<double key="NSDefaultTabInterval">36</double>
+																	<array key="NSTabStops" id="0"/>
+																	<int key="NSWritingDirection">1</int>
+																</object>
+															</dictionary>
+															<dictionary>
+																<object class="NSColor" key="NSColor">
+																	<int key="NSColorSpace">1</int>
+																	<bytes key="NSRGB">MC4wNDMxMzcyNTQ5IDAuMzI5NDExNzY0NyAwLjAwNzg0MzEzNzI1NQA</bytes>
+																</object>
+																<reference key="NSFont" ref="357035186"/>
+																<reference key="NSParagraphStyle" ref="1073709269"/>
+															</dictionary>
+														</array>
+														<object class="NSMutableData" key="NSAttributeInfo">
+															<bytes key="NS.bytes">iAMADwEWAA</bytes>
+														</object>
 														<nil key="NSDelegate"/>
 													</object>
 													<array class="NSMutableArray" key="NSTextContainers">
@@ -1549,7 +1562,7 @@ gg</bytes>
 													<nil key="NSDelegate"/>
 												</object>
 												<reference key="NSTextView" ref="497362524"/>
-												<double key="NSWidth">415</double>
+												<double key="NSWidth">385</double>
 												<int key="NSTCFlags">1</int>
 											</object>
 											<object class="NSTextViewSharedData" key="NSSharedData">
@@ -1589,11 +1602,11 @@ gg</bytes>
 											</object>
 											<int key="NSTVFlags">6</int>
 											<string key="NSMaxSize">{463, 10000000}</string>
-											<string key="NSMinize">{415, 281}</string>
+											<string key="NSMinize">{385, 281}</string>
 											<nil key="NSDelegate"/>
 										</object>
 									</array>
-									<string key="NSFrame">{{1, 1}, {415, 281}}</string>
+									<string key="NSFrame">{{1, 1}, {400, 281}}</string>
 									<reference key="NSSuperview" ref="609913676"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="497362524"/>
@@ -1758,7 +1771,7 @@ wGw</bytes>
 								<object class="NSScroller" id="1008410348">
 									<reference key="NSNextResponder" ref="609913676"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{400, 1}, {16, 281}}</string>
+									<string key="NSFrame">{{401, 1}, {15, 281}}</string>
 									<reference key="NSSuperview" ref="609913676"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView"/>
@@ -1767,7 +1780,7 @@ wGw</bytes>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<reference key="NSTarget" ref="609913676"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSPercent">0.7042606516290727</double>
+									<double key="NSPercent">0.669047619047619</double>
 								</object>
 								<object class="NSScroller" id="217435475">
 									<reference key="NSNextResponder" ref="609913676"/>
