@@ -22,32 +22,61 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#ifndef __UILABELATLAS_H__
-#define __UILABELATLAS_H__
+#ifndef __UILOADINGBAR_H__
+#define __UILOADINGBAR_H__
 
 #include "../BaseClasses/UIWidget.h"
-#include "../Drawable/UICCLabelAtlas.h"
 
 NS_CC_EXT_BEGIN
 
-class UILabelAtlas : public UIWidget
+typedef enum
+{
+    LoadingBarTypeLeft,
+    LoadingBarTypeRight
+}LoadingBarType;
+
+class UILoadingBar : public UIWidget
 {
 public:
-    UILabelAtlas();
-    virtual ~UILabelAtlas();
-    static UILabelAtlas* create();
-    void setProperty(const char* stringValue,const char* charMapFile, int itemWidth, int itemHeight, const char* startCharMap,bool useSpriteFrame = false);
-    void setStringValue(const char* value);
-    const char* getStringValue();
-    virtual void setAnchorPoint(const CCPoint &pt);
+    UILoadingBar();
+    virtual ~UILoadingBar();
+    static UILoadingBar* create();
+    void setDirection(LoadingBarType dir);
+    int getDirection();
+    void setTexture(const char* texture,TextureResType texType = UI_TEX_TYPE_LOCAL);
+    /* gui mark */
+    void setScale9Enable(bool able);
+    void setCapInsets(const CCRect &capInsets);
+    void setScale9Size(const CCSize &size);
+    /**/
+    void setPercent(int percent);
+    int getPercent();
+    float getTotalWidth();
+    float getTotalHeight();
     virtual CCNode* getValidNode();
-//    virtual void setOpacity(int opacity); // pipu cheat
 protected:
     virtual void initNodes();
+    void setScale9Scale();
 protected:
-    UICCLabelAtlas* m_pRenderLaberAtlas;
+    LoadingBarType m_nBarType;
+    int m_nPercent;
+    float m_fTotalLength;
+    float m_fBarHeight;
+    /* gui mark */
+    bool m_bScale9Enable;
+    CCRect m_capInsets;
+    CCSize m_scale9Size;
+    std::string m_strTextureFile;
+    /**/
+    /* gui mark */
+    CCNode* m_pRenderBar;
+    // before
+//    CCSprite* m_pRenderBar;
+    /**/
+    TextureResType m_eRenderBarTexType;
+//    bool m_bUseSpriteFrame;
 };
 
 NS_CC_EXT_END
 
-#endif /* defined(__CocoGUI__UILabelAtlas__) */
+#endif /* defined(__CocoGUI__UILoadingBar__) */

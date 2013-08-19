@@ -45,10 +45,15 @@ public:
     void setSlidBallNormalTexture(const char* normal,TextureResType texType = UI_TEX_TYPE_LOCAL);
     void setSlidBallPressedTexture(const char* pressed,TextureResType texType = UI_TEX_TYPE_LOCAL);
     void setSlidBallDisabledTexture(const char* disabled,TextureResType texType = UI_TEX_TYPE_LOCAL);
+    void setSlidBallAnchorPoint(const CCPoint& anchor);
     void setBarLength(float length);
     bool isProgressBarVisible();
-    void setProgressBarVisible(bool show);
+    void setProgressBarVisible(bool show);    
+	const CCSize& getProgressBarTextureSize() const;
     void setProgressBarTexture(const char* fileName, TextureResType texType = UI_TEX_TYPE_LOCAL);
+    void setProgressBarScale9Enable(bool able);
+    void setProgressBarCapInsets(const CCRect &capInsets);
+    void setProgressBarScale9Size(const CCSize &size);
     void setProgressBarScale();
     void setSlidBallPercent(int percent);
     virtual bool pointAtSelfBody(const CCPoint &pt);
@@ -81,7 +86,11 @@ protected:
     CCSize m_scale9Size;
     bool m_bProgressBarVisible;
     CCNode* m_pProgressBarNode;
+	CCSize m_pProgressBarTextureSize;
     std::string m_strProgressTextureFile;
+    bool m_bProgressBarScale9Enable;
+    CCRect m_progressBarCapInsets;
+    CCSize m_progressBarScale9Size;
     CCObject*       m_pPercentListener;
     SEL_PushEvent    m_pfnPercentSelector;
     TextureResType m_eBarTexType;
