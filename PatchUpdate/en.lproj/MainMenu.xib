@@ -1431,7 +1431,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="25593720">
 								<int key="NSCellFlags">68157504</int>
 								<int key="NSCellFlags2">71304192</int>
-								<string key="NSContents">cocos2dx v2.1.4f 升级到 cocos2dx v2.1.4g</string>
+								<string key="NSContents">cocos2dx v2.1.4g升级到 cocos2dx v2.1.4h</string>
 								<reference key="NSSupport" ref="725590612"/>
 								<string key="NSCellIdentifier">_NS:1535</string>
 								<reference key="NSControlView" ref="761597410"/>
@@ -1505,14 +1505,14 @@
 														<object class="NSMutableString" key="NSString">
 															<bytes key="NS.bytes">5rOo5oSP77yB77yB77yB77yB77yB77yMDSAgIDHjgIHlnKjkvb/nlKjkuYvliY3or7for6bnu4bpmIXo
 r7vkuIDkuIvms6jmhI/kuovpobnvvIzku6XlhY3mk43kvZzlpLHor6/jgIINICAgMuOAgeacrOWNh+e6
-p+WMheS7heeUqOS6jmNvY29zMmR4Mi4xLjRm5a6M5pW05YyF5Y2H57qn5Li6Mi4xLjRn5a6M5pW05YyF
+p+WMheS7heeUqOS6jmNvY29zMmR4Mi4xLjRn5a6M5pW05YyF5Y2H57qn5Li6Mi4xLjRo5a6M5pW05YyF
 77yMDeS4jeeUqOS6juWFtuS7lmNvY29zMmR454mI5pys44CCDSAgM+OAgeacrOWNh+e6p+WMhei/m+ih
 jOeahOaYr+aWh+S7tuimhuebluaTjeS9nO+8jOivt+WcqOWNh+e6p+WJjeWkh+S7veWlveS7peWJjeea
 hOeJiA3mnKzvvIzpmLLmraLku6PnoIHkuKLlpLHjgIINICA044CB6K+35Zyo6YCJ5oupY29jb3MyZHjn
 moTmoLnnm67lvZXjgIIgDeavlOWmgu+8mkM6XFVzZXJzXGRjXERlc2t0b3BcY29jb3MyZHhfdjIuMS40
-ZuS4i+mdouWMheWQq+S6hmNvY29zMmR4LA1Db2Nvc0RlbnNoaW9uLCBkb2N1bWVudCxleHRlbnNpb25z
+Z+S4i+mdouWMheWQq+S6hmNvY29zMmR4LA1Db2Nvc0RlbnNoaW9uLCBkb2N1bWVudCxleHRlbnNpb25z
 LCBleHRlbmFs562J562J77yM6K+36YCJ5oupDUM6XFVzZXJzXGRjXERlc2t0b3BcY29jb3MyZHhfdjIu
-MS40Zui/meS4quebruW9leOAgiAgICAgICAgICAgICAgICAgICAgIA</bytes>
+MS40Z+i/meS4quebruW9leOAgiAgICAgICAgICAgICAgICAgICAgIA</bytes>
 														</object>
 														<dictionary key="NSAttributes">
 															<object class="NSColor" key="NSBackgroundColor">
