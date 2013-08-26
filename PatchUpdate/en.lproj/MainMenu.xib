@@ -1431,7 +1431,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="25593720">
 								<int key="NSCellFlags">68157504</int>
 								<int key="NSCellFlags2">71304192</int>
-								<string key="NSContents">cocos2dx v2.1.4h升级到 cocos2dx v2.1.5a</string>
+								<string key="NSContents">cocos2dx v2.1.4h 升级到 cocos2dx v2.1.5a</string>
 								<reference key="NSSupport" ref="725590612"/>
 								<string key="NSCellIdentifier">_NS:1535</string>
 								<reference key="NSControlView" ref="761597410"/>
