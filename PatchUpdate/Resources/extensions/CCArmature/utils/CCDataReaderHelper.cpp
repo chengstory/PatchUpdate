@@ -96,6 +96,8 @@ static const char *A_PIVOT_Y = "pY";
 static const char *A_COCOS2D_PIVOT_X = "cocos2d_pX";
 static const char *A_COCOS2D_PIVOT_Y = "cocos2d_pY";
 
+static const char *A_BLEND_TYPE = "bd";
+
 static const char *A_ALPHA = "a";
 static const char *A_RED = "r";
 static const char *A_GREEN = "g";
@@ -139,7 +141,7 @@ static const char *CONFIG_FILE_PATH= "config_file_path";
 NS_CC_EXT_BEGIN
 
 
-	std::vector<std::string> s_arrConfigFileList;
+std::vector<std::string> s_arrConfigFileList;
 float s_PositionReadScale = 1;
 static float s_FlashToolVersion = VERSION_2_0;
 static float s_CocoStudioVersion = VERSION_COMBINED;
@@ -287,7 +289,7 @@ float CCDataReaderHelper::getPositionReadScale()
 }
 
 
-void CCDataReaderHelper::purgeDataReaderHelper()
+void CCDataReaderHelper::purge()
 {
 	CCDataReaderHelper::clear();
 	CC_SAFE_RELEASE_NULL(s_DataReaderHelper);
@@ -918,7 +920,7 @@ CCMovementBoneData *CCDataReaderHelper::decodeMovementBone(tinyxml2::XMLElement 
 CCFrameData *CCDataReaderHelper::decodeFrame(tinyxml2::XMLElement *frameXML,  tinyxml2::XMLElement *parentFrameXml, CCBoneData *boneData)
 {
 	float x, y, scale_x, scale_y, skew_x, skew_y = 0;
-	int duration, displayIndex, zOrder, tweenEasing = 0;
+	int duration, displayIndex, zOrder, tweenEasing, blendType = 0;
 
 	CCFrameData *frameData = new CCFrameData();
 
@@ -996,7 +998,10 @@ CCFrameData *CCDataReaderHelper::decodeFrame(tinyxml2::XMLElement *frameXML,  ti
 	{
 		frameData->zOrder = zOrder;
 	}
-
+	if (  frameXML->QueryIntAttribute(A_BLEND_TYPE, &blendType) == tinyxml2::XML_SUCCESS )
+	{
+		frameData->blendType = (CCBlendType)blendType;
+	}
 
 	tinyxml2::XMLElement *colorTransformXML = frameXML->FirstChildElement(A_COLOR_TRANSFORM);
 	if (colorTransformXML)
@@ -1355,24 +1360,6 @@ CCDisplayData *CCDataReaderHelper::decodeBoneDisplay(cs::CSJsonDictionary &json)
 			}
 		}
 		break;
-	case CS_DISPLAY_SHADER:
-		{
-			displayData = new CCShaderDisplayData();
-
-			const char *vert = json.getItemStringValue(A_VERT);
-			if(vert != NULL)
-			{
-				((CCShaderDisplayData *)displayData)->vert = vert;
-			}
-
-			const char *frag = json.getItemStringValue(A_FRAG);
-			if(frag != NULL)
-			{
-				((CCShaderDisplayData *)displayData)->frag = vert;
-			}
-
-		}
-		break;
 	default:
 		displayData = new CCSpriteDisplayData();
 
@@ -1418,7 +1405,7 @@ CCMovementData *CCDataReaderHelper::decodeMovement(cs::CSJsonDictionary &json)
 	movementData->durationTween = json.getItemIntValue(A_DURATION_TWEEN, 0);
 	movementData->durationTo = json.getItemIntValue(A_DURATION_TO, 0);
 	movementData->duration = json.getItemIntValue(A_DURATION, 0);
-	movementData->scale = json.getItemIntValue(A_MOVEMENT_SCALE, 1);
+	movementData->scale = json.getItemFloatValue(A_MOVEMENT_SCALE, 1);
 	movementData->tweenEasing = (CCTweenType)json.getItemIntValue(A_TWEEN_EASING, Linear);
 
 	const char *name = json.getItemStringValue(A_NAME);
@@ -1496,6 +1483,7 @@ CCFrameData *CCDataReaderHelper::decodeFrame(cs::CSJsonDictionary &json)
 
 	frameData->tweenEasing = (CCTweenType)json.getItemIntValue(A_TWEEN_EASING, Linear);
 	frameData->displayIndex = json.getItemIntValue(A_DISPLAY_INDEX, 0);
+	frameData->blendType = (CCBlendType)json.getItemIntValue(A_BLEND_TYPE, 0);
 
 	const char *event = json.getItemStringValue(A_EVENT);
 	if (event != NULL)

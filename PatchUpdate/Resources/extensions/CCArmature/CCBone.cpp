@@ -72,6 +72,7 @@ CCBone::CCBone()
     m_bIgnoreMovementBoneData = false;
     m_tWorldTransform = CCAffineTransformMake(1, 0, 0, 1, 0, 0);
     m_bBoneTransformDirty = true;
+	m_eBlendType = BLEND_NORMAL;
 }
 
 
@@ -198,12 +199,14 @@ void CCBone::update(float delta)
 
 void CCBone::updateDisplayedColor(const ccColor3B &parentColor)
 {
+	_realColor = ccc3(255, 255, 255);
     CCNodeRGBA::updateDisplayedColor(parentColor);
     updateColor();
 }
 
 void CCBone::updateDisplayedOpacity(GLubyte parentOpacity)
 {
+	_realOpacity = 255;
     CCNodeRGBA::updateDisplayedOpacity(parentOpacity);
     updateColor();
 }
@@ -352,9 +355,9 @@ void CCBone::addDisplay(CCNode *display, int index)
 	m_pDisplayManager->addDisplay(display, index);
 }
 
-void CCBone::changeDisplayByIndex(int _index, bool _force)
+void CCBone::changeDisplayByIndex(int index, bool force)
 {
-    m_pDisplayManager->changeDisplayByIndex(_index, _force);
+    m_pDisplayManager->changeDisplayByIndex(index, force);
 }
 
 NS_CC_EXT_END
