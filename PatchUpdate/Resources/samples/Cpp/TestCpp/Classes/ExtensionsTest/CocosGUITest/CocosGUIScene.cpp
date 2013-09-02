@@ -1,8 +1,16 @@
 #include "CocosGUIScene.h"
 #include "CocosGUIExamplesScene.h"
+#include "UISceneManager.h"
+#include "CocosGUIExamplesRegisterScene.h"
 
+const char* gui_scene_names[2] =
+{
+    "CocosGUIWidgetTest",
+    "CocosGUIExampleTest",
+};
 
 CocosGUITestScene::CocosGUITestScene(bool bPortrait)
+: m_pLabel(NULL)
 {
 	TestScene::init();
 }
@@ -23,8 +31,21 @@ void CocosGUITestScene::runThisTest()
     ul->scheduleUpdate();
     this->addChild(ul);
     
-    UIPanel * p = (UIPanel*)CCUIHELPER->createWidgetFromJsonFile("cocosgui/1_2/1_2.json");
-    ul->addWidget(p);
+    CCSize s = CCDirector::sharedDirector()->getWinSize();
+    
+    m_pItemMenu = CCMenu::create();
+    m_pItemMenu->setPosition( CCPointZero );
+    CCMenuItemFont::setFontName("Arial");
+    CCMenuItemFont::setFontSize(24);
+    for (int i = 0; i < 2; ++i)
+    {
+        CCMenuItemFont* pItem = CCMenuItemFont::create(gui_scene_names[i], this,
+                                                       menu_selector(CocosGUITestScene::menuCallback));
+        pItem->setPosition(ccp(s.width / 2, s.height - s.height / 4 - (i + 1) * 40));
+        pItem->setTag(i);
+        m_pItemMenu->addChild(pItem);
+    }
+    addChild(m_pItemMenu);
 }
 void CocosGUITestScene::MainMenuCallback(CCObject* pSender)
 {
@@ -39,10 +60,40 @@ void CocosGUITestScene::toCocosGUIExampleScene(CCObject* pSender)
     CCLOG("p2 click");
     ul->removeFromParent();
     
-    CocosGUIExamplesScene* pScene = new CocosGUIExamplesScene();
-    if (pScene)
+}
+
+void CocosGUITestScene::load(CCObject *pSender, int count)
+{
+    char tmp[10];
+    sprintf(tmp,"%d", count);
+    m_pLabel->setString(CCString::createWithFormat("%i", count)->getCString());
+    
+    UIWidget* widget = dynamic_cast<UIWidget*>(pSender);
+}
+
+void CocosGUITestScene::menuCallback(CCObject *pSender)
+{
+    CCMenuItemFont* pItem = dynamic_cast<CCMenuItemFont*>(pSender);
+    
+    switch (pItem->getTag())
     {
-        pScene->runThisTest();
-        pScene->release();
+        case 0:
+        {
+            UISceneManager* pManager = UISceneManager::sharedUISceneManager();
+            CCScene* pScene = pManager->currentUIScene();
+            CCDirector::sharedDirector()->replaceScene(pScene);
+        }
+            break;
+            
+        case 1:
+        {
+            CocosGUIExamplesRegisterScene* pScene = new CocosGUIExamplesRegisterScene();
+            pScene->runThisTest();
+            pScene->release();
+        }
+            break;
+            
+        default:
+            break;
     }
 }
